@@ -1,0 +1,12 @@
+services:
+  mysql:
+    image: mysql:8
+    ports:
+      - 3306:3306
+    volumes:
+      - ~/apps/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_PASSWORD=admin
+      - MYSQL_USER=administrator
+      - MYSQL_DATABASE=produtos_nest
